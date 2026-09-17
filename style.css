@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #a3fffc;
+    color: #54251c;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    height: 75px;
+    background: #fff9df;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom: 5px solid #ff9d00;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 0 #e74720;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #e74720;
+}
+
+.logo span {
+    color: #ff9d00;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #54251c;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #e74720;
+    transform: scale(1.05);
+}
+
+.carrinho-btn {
+    border: 3px solid #54251c;
+
+    background: #ffcc21;
+    color: #54251c;
+
+    padding: 10px 17px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    box-shadow: 0 4px 0 #e74720;
+
+    transition: 0.15s;
+}
+
+.carrinho-btn:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #e74720;
+}
+
+#contador {
+    background: #e74720;
+    color: white;
+
+    padding: 3px 7px;
+
+    border-radius: 50%;
+
+    margin-left: 5px;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 10%;
+
+    background:
+        linear-gradient(
+            rgba(163, 255, 252, 0.78),
+            rgba(255, 245, 188, 0.82)
+        ),
+        url("imagens/bolo.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 8px solid #ff9d00;
+}
+
+.banner-texto {
+    max-width: 550px;
+}
+
+.banner h1 {
+    font-size: 50px;
+
+    color: #e74720;
+
+    margin-bottom: 20px;
+
+    text-shadow: 3px 3px 0 #ffcc21;
+}
+
+.banner p {
+    font-size: 20px;
+
+    color: #54251c;
+
+    margin-bottom: 30px;
+
+    line-height: 1.5;
+}
+
+.botao {
+    display: inline-block;
+
+    background: #e74720;
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: 3px solid #54251c;
+
+    box-shadow: 0 5px 0 #54251c;
+
+    transition: 0.15s;
+}
+
+.botao:hover {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #54251c;
+}
+
+
+/* =========================
+   CATÁLOGO
+========================= */
+
+.catalogo {
+    padding: 70px 7%;
+
+    background: #fff9df;
+}
+
+.catalogo h2 {
+    text-align: center;
+
+    font-size: 35px;
+
+    color: #e74720;
+
+    text-shadow: 2px 2px 0 #ffcc21;
+}
+
+.subtitulo {
+    text-align: center;
+
+    margin: 10px 0 30px;
+
+    color: #54251c;
+}
+
+
+/* =========================
+   FILTROS
+========================= */
+
+.filtros {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.filtros button {
+    border: 3px solid #54251c;
+
+    background: #ffcc21;
+
+    color: #54251c;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    box-shadow: 0 3px 0 #e74720;
+
+    transition: 0.15s;
+}
+
+.filtros button:hover {
+    background: #e74720;
+
+    color: white;
+
+    transform: translateY(2px);
+
+    box-shadow: 0 1px 0 #54251c;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 30px;
+}
+
+.produto {
+    background: #fffdf0;
+
+    border: 4px solid #e74720;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 7px 0 #ff9d00;
+
+    padding-bottom: 20px;
+
+    transition: 0.2s;
+}
+
+.produto:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 0 #ff9d00;
+}
+
+.produto img {
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-bottom: 4px solid #ff9d00;
+}
+
+.produto h3 {
+    padding: 15px 15px 5px;
+
+    color: #e74720;
+
+    font-size: 21px;
+}
+
+.produto p {
+    padding: 0 15px;
+
+    color: #70483e;
+
+    min-height: 45px;
+
+    line-height: 1.4;
+}
+
+.produto strong {
+    display: block;
+
+    padding: 15px;
+
+    font-size: 22px;
+
+    color: #54251c;
+}
+
+.produto button {
+    margin: 0 15px;
+
+    width: calc(100% - 30px);
+
+    padding: 13px;
+
+    border: 3px solid #54251c;
+
+    background: #ffcc21;
+
+    color: #54251c;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    box-shadow: 0 4px 0 #e74720;
+
+    transition: 0.15s;
+}
+
+.produto button:hover {
+    background: #e74720;
+
+    color: white;
+
+    transform: translateY(3px);
+
+    box-shadow: 0 1px 0 #54251c;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    background: #e74720;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20%;
+
+    border-top: 8px solid #ff9d00;
+}
+
+.sobre h2 {
+    margin-bottom: 20px;
+
+    color: #ffcc21;
+
+    font-size: 32px;
+}
+
+.sobre p {
+    line-height: 1.7;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   CARRINHO
+========================= */
+
+.carrinho {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(84, 37, 28, 0.65);
+
+    display: none;
+
+    justify-content: flex-end;
+
+    z-index: 2000;
+}
+
+.carrinho-conteudo {
+    background: #fff9df;
+
+    width: 400px;
+
+    max-width: 90%;
+
+    height: 100%;
+
+    padding: 30px;
+
+    overflow-y: auto;
+
+    border-left: 8px solid #e74720;
+}
+
+.carrinho-conteudo h2 {
+    color: #e74720;
+
+    margin-bottom: 20px;
+}
+
+.fechar {
+    float: right;
+
+    border: 3px solid #54251c;
+
+    background: #ffcc21;
+
+    color: #54251c;
+
+    font-size: 18px;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.item-carrinho {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 2px dashed #ff9d00;
+}
+
+.item-carrinho strong {
+    color: #e74720;
+}
+
+.remover {
+    background: #e74720;
+
+    color: white;
+
+    border: 2px solid #54251c;
+
+    padding: 5px 9px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.carrinho-conteudo h3 {
+    margin-top: 25px;
+
+    color: #54251c;
+}
+
+#total {
+    color: #e74720;
+}
+
+.whatsapp {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 3px solid #54251c;
+
+    border-radius: 12px;
+
+    background: #ffcc21;
+
+    color: #54251c;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin-top: 20px;
+
+    box-shadow: 0 4px 0 #e74720;
+}
+
+.whatsapp:hover {
+    background: #e74720;
+
+    color: white;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #54251c;
+
+    color: #ffcc21;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 6px solid #ff9d00;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .banner {
+        padding: 40px 25px;
+
+        min-height: 400px;
+    }
+
+    .banner h1 {
+        font-size: 38px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .catalogo {
+        padding: 50px 20px;
+    }
+
+    .sobre {
+        padding: 50px 25px;
+    }
+
+    .carrinho-conteudo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}

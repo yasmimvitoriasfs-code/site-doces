@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sunny Doces</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+
+        <div class="logo">
+            Sunny<span>Doces</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#sobre">Sobre nós</a>
+        </nav>
+
+        <button class="carrinho-btn" onclick="abrirCarrinho()">
+            🛒 Carrinho
+            <span id="contador">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- BANNER -->
+    <section class="banner" id="inicio">
+
+        <div class="banner-texto">
+
+            <h1>Doces feitos com amor ❤️</h1>
+
+            <p>
+                Escolha seus doces favoritos e faça seu pedido
+                diretamente pelo WhatsApp!
+            </p>
+
+            <a href="#catalogo" class="botao">
+                Ver catálogo
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATÁLOGO -->
+    <section class="catalogo" id="catalogo">
+
+        <h2>Nosso catálogo 🍰</h2>
+
+        <p class="subtitulo">
+            Escolha uma categoria:
+        </p>
+
+
+        <!-- FILTROS -->
+
+        <div class="filtros">
+
+            <button onclick="filtrar('todos')">
+                Todos
+            </button>
+
+            <button onclick="filtrar('Mousses')">
+                Mousses
+            </button>
+
+        </div>
+
+
+        <!-- PRODUTOS -->
+
+        <div class="produtos">
+
+
+            <!-- BRIGADEIRO -->
+
+            <div class="produto" data-categoria="Mousses">
+
+                <img src="Foto.doce.maracuja.cobertura.avif">
+
+                <h3>Mousse de Maracujá com cobertura</h3>
+
+                <p>
+                    Mousse de maracujá caseiro, com cobertura de polpa de maracujá.
+                </p>
+
+                <strong>
+                    R$ 5,00
+                </strong>
+
+                <button onclick="adicionarCarrinho('Mousse de Maracujá', 5.00)">
+                    🛒 Adicionar
+                </button>
+
+            </div>
+
+
+            <!-- BEIJINHO -->
+
+            <div class="produto" data-categoria="Mousses">
+
+                <img src="foto.mousse.maracujá.sem.cobertura.jpg">
+
+                <h3>Mousse de Maracujá sem cobertura</h3>
+
+                <p>
+                    Mousse de Maracujá caseiro sem a cobertura.
+                </p>
+
+                <strong>
+                    R$ 5.00
+                </strong>
+
+                <button onclick="adicionarCarrinho('Mousse de Maracujá sem cobertura', 5.00)">
+                    🛒 Adicionar
+                </button>
+
+            </div>
+
+
+           
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="sobre" id="sobre">
+
+        <h2>Sobre a Sunny Doces 🍓</h2>
+
+        <p>
+            Somos uma confeitaria caseira, composto por um confeiteiro
+        </p>
+
+    </section>
+
+
+    <!-- CARRINHO -->
+
+    <div class="carrinho" id="carrinho">
+
+        <div class="carrinho-conteudo">
+
+            <button class="fechar" onclick="fecharCarrinho()">
+                ✕
+            </button>
+
+            <h2>🛒 Seu carrinho</h2>
+
+            <div id="listaCarrinho"></div>
+
+            <h3>
+                Total:
+                R$ <span id="total">0.00</span>
+            </h3>
+
+            <button class="whatsapp" onclick="finalizarPedido()">
+                📱 Fazer pedido pelo WhatsApp
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 Sunny Doces
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
