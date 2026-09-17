@@ -585,4 +585,81 @@ footer {
         max-width: 100%;
     }
 
+}/* =========================
+   DADOS DO PEDIDO
+========================= */
+
+.dados-pedido {
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 3px dashed #ff9d00;
+}
+
+.dados-pedido h3 {
+    color: #e74720;
+
+    margin-bottom: 20px;
+}
+
+
+/* LABELS */
+
+.dados-pedido label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    font-weight: bold;
+
+    color: #54251c;
+}
+
+
+/* INPUTS */
+
+.dados-pedido input,
+.dados-pedido select,
+.dados-pedido textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 3px solid #ff9d00;
+
+    border-radius: 10px;
+
+    background: #fffdf0;
+
+    color: #54251c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+/* QUANDO CLICAR */
+
+.dados-pedido input:focus,
+.dados-pedido select:focus,
+.dados-pedido textarea:focus {
+
+    border-color: #e74720;
+
+    box-shadow: 0 0 0 2px #ffcc21;
+}
+
+
+/* ENDEREÇO */
+
+.dados-pedido textarea {
+
+    height: 90px;
+
+    resize: vertical;
 }
