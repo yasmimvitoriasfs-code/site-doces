@@ -90,10 +90,10 @@
 
                 <img src="imagens/colher.jpg">
 
-                <h3>Mousse de Maracujá com cobertura</h3>
+                <h3>Mousse de Maracujá com calda</h3>
 
                 <p>
-                    Mousse de maracujá caseiro, com cobertura de polpa de maracujá.
+                    Mousse de maracujá caseiro, com calda de polpa de maracujá.
                 </p>
 
                 <strong>
@@ -113,24 +113,22 @@
 
                 <img src="imagens/trio.jpg">
 
-                <h3>Mousse de Maracujá sem cobertura</h3>
+                <h3>Mousse de Maracujá sem calda</h3>
 
                 <p>
-                    Mousse de Maracujá caseiro sem a cobertura.
+                    Mousse de Maracujá caseiro sem a calda.
                 </p>
 
                 <strong>
                     R$ 5.00
                 </strong>
 
-                <button onclick="adicionarCarrinho('Mousse de Maracujá sem cobertura', 5.00)">
+                <button onclick="adicionarCarrinho('Mousse de Maracujá sem calda', 5.00)">
                     🛒 Adicionar
                 </button>
 
             </div>
-
-
-           
+            '
 
     </section>
 
@@ -148,33 +146,98 @@
     </section>
 
 
-    <!-- CARRINHO -->
+<div class="carrinho" id="carrinho">
 
-    <div class="carrinho" id="carrinho">
+    <div class="carrinho-conteudo">
 
-        <div class="carrinho-conteudo">
+        <button class="fechar" onclick="fecharCarrinho()">
+            ✕
+        </button>
 
-            <button class="fechar" onclick="fecharCarrinho()">
-                ✕
-            </button>
+        <h2>🛒 Seu carrinho</h2>
 
-            <h2>🛒 Seu carrinho</h2>
+        <div id="listaCarrinho"></div>
 
-            <div id="listaCarrinho"></div>
+        <h3>
+            Total:
+            R$ <span id="total">0,00</span>
+        </h3>
 
-            <h3>
-                Total:
-                R$ <span id="total">0.00</span>
-            </h3>
 
-            <button class="whatsapp" onclick="finalizarPedido()">
-                📱 Fazer pedido pelo WhatsApp
-            </button>
+        <!-- DADOS DO CLIENTE -->
+
+        <div class="dados-pedido">
+
+            <h3>📋 Dados do pedido</h3>
+
+
+            <!-- NOME -->
+
+            <label for="nomeCliente">
+                Seu nome:
+            </label>
+
+            <input
+                type="text"
+                id="nomeCliente"
+                placeholder="Digite seu nome"
+            >
+
+
+            <!-- PAGAMENTO -->
+
+            <label for="pagamento">
+                Forma de pagamento:
+            </label>
+
+            <select id="pagamento">
+
+                <option value="">
+                    Selecione
+                </option>
+
+                <option value="Cartão">
+                    💳 Cartão
+                </option>
+
+                <option value="Pix">
+                    💠 Pix
+                </option>
+
+                <option value="Dinheiro">
+                    💵 Dinheiro
+                </option>
+
+            </select>
+
+
+            <!-- ENDEREÇO -->
+
+            <label for="endereco">
+                Local de entrega:
+            </label>
+
+            <textarea
+                id="endereco"
+                placeholder="Digite seu endereço para entrega..."
+            ></textarea>
 
         </div>
 
+
+        <!-- BOTÃO WHATSAPP -->
+
+        <button
+            class="whatsapp"
+            onclick="finalizarPedido()">
+
+            📱 Fazer pedido pelo WhatsApp
+
+        </button>
+
     </div>
 
+</div>
 
     <footer>
 
