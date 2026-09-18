@@ -91,7 +91,7 @@ function atualizarCarrinho() {
 
             </button>
 
-        `;
+        `
 
 
         lista.appendChild(item);
@@ -100,7 +100,7 @@ function atualizarCarrinho() {
 
 
     // Atualiza contador
-{
+
     contador.textContent = carrinho.length;
 
 
