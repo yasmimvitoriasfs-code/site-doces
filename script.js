@@ -241,7 +241,7 @@ function finalizarPedido() {
     // NÚMERO DO WHATSAPP
     // ========================================
 
-    const telefone = "551298880-8036";
+    const telefone = "5512988808036";
 
 
     // ========================================
