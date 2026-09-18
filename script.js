@@ -181,40 +181,89 @@ function filtrar(categoria) {
 }
 
 
-// ========================================
-// FINALIZAR PEDIDO
-// ========================================
-
 function finalizarPedido() {
 
-    // Verifica se está vazio
+    // ========================================
+    // VERIFICAR CARRINHO
+    // ========================================
 
     if (carrinho.length === 0) {
 
-        alert(
-            "Seu carrinho está vazio! 🍰"
-        );
+        alert("Seu carrinho está vazio! 🍰");
 
         return;
-
     }
 
 
-    // Número do confeiteiro
+    // ========================================
+    // PEGAR DADOS DO CLIENTE
+    // ========================================
 
-    const telefone = "5512992590928";
+    const nome =
+        document.getElementById("nomeCliente").value.trim();
+
+    const pagamento =
+        document.getElementById("pagamento").value;
+
+    const endereco =
+        document.getElementById("endereco").value.trim();
 
 
-    // Começo da mensagem
+    // ========================================
+    // VERIFICAR PREENCHIMENTO
+    // ========================================
+
+    if (nome === "") {
+
+        alert("Digite seu nome antes de finalizar o pedido! 😊");
+
+        return;
+    }
+
+
+    if (pagamento === "") {
+
+        alert("Escolha uma forma de pagamento! 💳");
+
+        return;
+    }
+
+
+    if (endereco === "") {
+
+        alert("Digite o local de entrega! 📍");
+
+        return;
+    }
+
+
+    // ========================================
+    // NÚMERO DO WHATSAPP
+    // ========================================
+
+    const telefone = "551298880-8036";
+
+
+    // ========================================
+    // MONTAR PEDIDO
+    // ========================================
 
     let mensagem =
-        "Olá! Gostaria de fazer um pedido! 🍰\n\n";
+        "🍰 *NOVO PEDIDO - Sunny Doces* 🍰\n\n";
+
+
+    mensagem +=
+        "👤 *Cliente:* " +
+        nome +
+        "\n\n";
+
+
+    mensagem +=
+        "📦 *Produtos:*\n";
 
 
     let total = 0;
 
-
-    // Adiciona os produtos
 
     carrinho.forEach(function(produto) {
 
@@ -233,20 +282,40 @@ function finalizarPedido() {
     });
 
 
-    // Adiciona o total
+    // ========================================
+    // TOTAL
+    // ========================================
 
     mensagem +=
-        "\n💰 Total: R$ " +
+        "\n💰 *Total:* R$ " +
         total.toFixed(2).replace(".", ",");
 
 
-    // Transforma a mensagem para URL
+    // ========================================
+    // PAGAMENTO
+    // ========================================
+
+    mensagem +=
+        "\n\n💳 *Forma de pagamento:* " +
+        pagamento;
+
+
+    // ========================================
+    // ENTREGA
+    // ========================================
+
+    mensagem +=
+        "\n\n📍 *Local de entrega:* " +
+        endereco;
+
+
+    // ========================================
+    // ABRIR WHATSAPP
+    // ========================================
 
     const mensagemCodificada =
         encodeURIComponent(mensagem);
 
-
-    // Cria o link do WhatsApp
 
     const url =
         "https://wa.me/" +
@@ -254,8 +323,6 @@ function finalizarPedido() {
         "?text=" +
         mensagemCodificada;
 
-
-    // Abre o WhatsApp
 
     window.open(url, "_blank");
 
