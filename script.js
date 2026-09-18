@@ -100,7 +100,7 @@ function atualizarCarrinho() {
 
 
     // Atualiza contador
-
+{
     contador.textContent = carrinho.length;
 
 
