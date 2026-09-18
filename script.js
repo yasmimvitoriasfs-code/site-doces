@@ -320,7 +320,7 @@ function finalizarPedido() {
     const url =
         "https://wa.me/" +
         
-        const telefone +
+        telefone +
        
         "?text=" +
         mensagemCodificada;
