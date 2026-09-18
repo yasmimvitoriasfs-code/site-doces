@@ -91,7 +91,7 @@ function atualizarCarrinho() {
 
             </button>
 
-        `
+        `;
 
 
         lista.appendChild(item);
