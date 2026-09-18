@@ -100,12 +100,12 @@ function atualizarCarrinho() {
 
 
     // Atualiza contador
-
+    
     contador.textContent = carrinho.length;
 
 
     // Atualiza preço
-
+    {
     totalElemento.textContent =
         total.toFixed(2).replace(".", ",");
 
